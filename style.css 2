@@ -1,0 +1,21 @@
+.primary-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover state */
+.primary-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Disabled state */
+.primary-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
