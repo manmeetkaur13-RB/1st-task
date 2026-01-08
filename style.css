@@ -61,6 +61,16 @@ body {
     align-items: center;
     padding-top: 40px;
     transition: 0.3s;
+    .hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
   }
 
   .nav-menu.active {
