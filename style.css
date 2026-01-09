@@ -79,3 +79,40 @@ body {
 .content {
   padding: 100px 20px;
 }
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+#search-input {
+  padding: 10px 14px;
+  width: 220px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Focus state (MANDATORY) */
+#search-input:focus {
+  outline: none;
+  border-color: #111827;
+}
+
+#search-btn {
+  padding: 10px 14px;
+  border: none;
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#search-btn:hover {
+  background-color: #1f2937;
+}
