@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SATIC</title>
-  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar with Search</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar">
+  <nav class="navbar">
+    <div class="logo">LOGO</div>
 
-    <div class="logo">SATIC</div>
-
-    <!-- Hamburger Icon -->
-    <div class="hamburger" id="hamburger">☰</div>
-
-    <!-- Navigation Menu -->
     <ul class="nav-menu" id="nav-menu">
       <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
@@ -24,27 +19,27 @@
       <li><a href="#">Contact</a></li>
     </ul>
 
-  </header>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">☰</div>
+  </nav>
 
   <!-- PAGE CONTENT -->
-<main class="content">
+  <main class="content">
+    <h1>Welcome to Day 5 Task</h1>
 
-  <!-- SEARCH BAR -->
-  <form id="search-form" class="search-bar">
-    <input
-      type="text"
-      id="search-input"
-      placeholder="Search..."
-      aria-label="Search"
-    />
-    <button type="submit" id="search-btn">🔍</button>
-  </form>
+    <!-- SEARCH BAR -->
+    <form id="search-form" class="search-bar">
+      <input
+        type="text"
+        id="search-input"
+        name="search"
+        placeholder="Search..."
+        aria-label="Search"
+      />
+      <button type="submit" id="search-btn">🔍</button>
+    </form>
+  </main>
 
-  <p>Scroll the page. Background scroll will stop when menu is open.</p>
-  <p style="margin-top: 900px;">End of page</p>
-
-</main>
-
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
