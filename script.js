@@ -1,24 +1,28 @@
 
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
-const body = document.body;
+// Get elements
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
 
-// Open / Close menu
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+// Handle form submit
+searchForm.addEventListener("submit", function (e) {
+  e.preventDefault(); // stop page reload
 
-  // Disable background scroll
-  if (navMenu.classList.contains("active")) {
-    body.style.overflow = "hidden";
-  } else {
-    body.style.overflow = "auto";
+  const query = searchInput.value.trim();
+
+  // Empty submit handled safely
+  if (query === "") {
+    alert("Please enter a search term");
+    searchInput.focus();
+    return;
   }
+
+  // Demo search action
+  alert(`Searching for: ${query}`);
+
+  // Clear input after search
+  searchInput.value = "";
 });
 
-// Close menu when clicking a link
-document.querySelectorAll(".nav-menu a").forEach(link => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("active");
-    body.style.overflow = "auto";
-  });
-});
+// Keyboard accessibility (Enter key already supported by form)
+// Extra: focus state handled via CSS
