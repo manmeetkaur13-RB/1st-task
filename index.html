@@ -3,42 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar with Search</title>
+  <title>Reusable Card Component</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">LOGO</div>
+  <h1 class="heading">Card Component</h1>
 
-    <ul class="nav-menu" id="nav-menu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Card Image">
+      <div class="card-content">
+        <h3>Card Title One</h3>
+        <p>This is a reusable card component with image, text, and button.</p>
+        <button>Read More</button>
+      </div>
+    </div>
 
-    <!-- Hamburger Icon -->
-    <div class="hamburger" id="hamburger">☰</div>
-  </nav>
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Card Image">
+      <div class="card-content">
+        <h3>Card Title Two</h3>
+        <p>Cards are equal height and fully responsive across all devices.</p>
+        <button>Read More</button>
+      </div>
+    </div>
 
-  <!-- PAGE CONTENT -->
-  <main class="content">
-    <h1>Welcome to Day 5 Task</h1>
-
-    <!-- SEARCH BAR -->
-    <form id="search-form" class="search-bar">
-      <input
-        type="text"
-        id="search-input"
-        name="search"
-        placeholder="Search..."
-        aria-label="Search"
-      />
-      <button type="submit" id="search-btn">🔍</button>
-    </form>
-  </main>
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/300x180" alt="Card Image">
+      <div class="card-content">
+        <h3>Card Title Three</h3>
+        <p>Clean UI, reusable design, and smooth user experience.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
