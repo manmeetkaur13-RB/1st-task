@@ -1,8 +1,8 @@
-// Simple button click interaction
-const buttons = document.querySelectorAll(".card-content button");
+// Select elements
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    alert("Button clicked!");
-  });
+// Toggle menu on hamburger click
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
 });
