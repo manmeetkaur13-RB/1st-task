@@ -173,20 +173,18 @@ main {
   align-items: center;
   color: #fff;
   z-index: 1000;
-  transform: translateY(0);
+  transform: translateY(-100%);
   transition: transform 0.3s ease;
 }
 
-.notification.hidden {
-  transform: translateY(-100%);
-}
-
 .notification.success {
-  background-color: #2ecc71;
+  background-color: green;
+  transform: translateY(0);
 }
 
 .notification.error {
-  background-color: #e74c3c;
+  background-color: green;
+  transform: translateY(0);
 }
 
 #close-btn {
