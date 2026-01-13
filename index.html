@@ -50,7 +50,7 @@
     <p>Name: <strong>Manmeet</strong></p><br>
     <p>This website is deployed using GitHub Pages.</p><br>
 
-    <button class="primary-btn" onclick="showSuccess()">Send</button>
+    <button class="primary-btn" onclick="onSubmitForm()">Send</button>
     <button class="primary-btn" disabled>Disabled</button>
   </main>
   
@@ -88,6 +88,23 @@
 
   </div>
   </section>
+  <div id="message" class="notification"></div>
+<script>
+function onSubmitForm() {
+  const msgEl = document.getElementById("message");
+
+  // TEMPORARY: assume valid input
+  const isValid = true;
+
+  if (isValid) {
+    msgEl.textContent = "Success!";
+    msgEl.className = "notification success";
+  } else {
+    msgEl.textContent = "Please fill required fields!";
+    msgEl.className = "notification error";
+  }
+}
+</script>
   
 
   <script src="script.js"></script>
