@@ -43,3 +43,28 @@ if (searchForm && searchInput) {
     alert("Searching for: " + value);
   });
 }
+// ================== NOTIFICATION BANNER (DAY 7) ==================
+
+const notification = document.getElementById("notification");
+const closeBtn = document.getElementById("close-btn");
+
+// function to show notification
+function showNotification(type, message) {
+  notification.classList.remove("hidden", "success", "error");
+  notification.classList.add(type);
+  notification.querySelector("span").innerText = message;
+
+  // auto hide after 3 seconds
+  setTimeout(() => {
+    notification.classList.add("hidden");
+  }, 3000);
+}
+
+// close button
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    notification.classList.add("hidden");
+  });
+}
+
+
