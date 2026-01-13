@@ -66,7 +66,11 @@ if (closeBtn) {
     notification.classList.add("hidden");
   });
 }
-// Trigger notification on page load
-showNotification("success", "Task completed successfully!");
+
+// button click handler
+function showSuccess() {
+  showNotification("success", "Task completed successfully!");
+
+}
 
 
