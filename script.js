@@ -67,6 +67,9 @@ function showSuccess() {
 function showError() {
   showNotification("error", "Something went wrong!");
 }
+function dismiss() {
+  notification.classList.add("hidden");
+}
 
 // close button
 if (closeBtn) {
