@@ -43,35 +43,20 @@ if (searchForm && searchInput) {
     alert("Searching for: " + value);
   });
 }
-// ========== NOTIFICATION BANNER (DAY 7) ==========
+/* ===== Day 7: Notification ===== */
+const notification = document.getElementById("notification");
+const message = document.getElementById("message");
 
-const notification = document.getElementById("message");
-const closeBtn = document.getElementById("close-btn");
-
-function showNotification(type, message) {
-  notification.classList.remove("hidden", "success", "error");
-  notification.classList.add(type);
-  notification.textContent = message;
-
-  setTimeout(() => {
-    notification.classList.add("hidden");
-  }, 3000);
-}
-
-// success button
 function showSuccess() {
-  showNotification("success", "Task completed successfully!");
+  message.textContent = "Success! Task deployed successfully.";
+  notification.className = "notification success";
 }
 
-// error button
 function showError() {
-  showNotification("error", "Something went wrong!");
+  message.textContent = "Error! Something went wrong.";
+  notification.className = "notification error";
 }
 
-
-// close button
-if (closeBtn) {
-  closeBtn.addEventListener("click", () => {
-    notification.classList.add("hidden");
-  });
+function dismiss() {
+  notification.classList.add("hidden");
 }
