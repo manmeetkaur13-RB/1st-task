@@ -93,9 +93,10 @@ if (usernameInput && submitBtn && contactForm) {
       submitBtn.disabled = true;
       return;
     }
-
-    successMsg.textContent = "Form submitted successfully!";
-    usernameInput.value = "";
-    submitBtn.disabled = true;
+ successMsg.textContent = "Form submitted successfully!";
+errorMsg.style.display = "none";
+usernameInput.value = "";
+submitBtn.disabled = true;
+    
   });
 }
