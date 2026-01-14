@@ -54,6 +54,27 @@
     <h2>Day-6 Task Completed</h2><br>
     <p>Name: <strong>Manmeet</strong></p><br>
     <p>This website is deployed using GitHub Pages.</p><br>
+    
+    <!-- Day 8 Task: Form Input & Submit -->
+<section class="day8-form">
+  <h2>Day 8 – Form Input & Submit</h2>
+
+  <form id="contactForm">
+    <!-- Label connected to input -->
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter your name" />
+
+    <!-- Error message -->
+    <p id="errorMsg" class="error" style="display:none">
+  This field is required
+    </p>
+
+    <!-- Submit button -->
+    <button type="submit" id="submitBtn" disabled>Submit</button>
+  </form>
+
+  <p id="successMsg" class="success"></p>
+</section>
 
   
   <section class="card-section">
@@ -90,23 +111,7 @@
 
   </div>
   </section>
-  <div id="message" class="notification"></div>
-<script>
-function onSubmitForm() {
-  const msgEl = document.getElementById("message");
 
-  // TEMPORARY: assume valid input
-  const isValid = true;
-
-  if (isValid) {
-    msgEl.textContent = "Success!";
-    msgEl.className = "notification success";
-  } else {
-    msgEl.textContent = "Please fill required fields!";
-    msgEl.className = "notification error";
-  }
-}
-</script>
   
 
   <script src="script.js"></script>
