@@ -380,3 +380,29 @@ body {
     text-align: center;
   }
 }
+
+.day8-form button {
+  background-color: #ccc;
+}
+
+
+/* FORCE Notification Buttons Color */
+.container .primary-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  margin: 5px;
+}
+
+/* Success */
+.container .primary-btn.success {
+  background-color: #28a745 !important;
+}
+
+/* Error */
+.container .primary-btn.error {
+  background-color: #dc3545 !important;
+}
