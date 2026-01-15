@@ -314,16 +314,13 @@ main {
   .btn-error:hover {
     background-color: #c82333;
   }
-</style>
+
 
 /* Make footer stick to bottom */
 html, body {
-  height: 100%;
-}
-
-body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .footer {
@@ -406,3 +403,4 @@ body {
 .container .primary-btn.error {
   background-color: #dc3545 !important;
 }
+</style>
