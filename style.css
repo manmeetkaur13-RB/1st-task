@@ -205,6 +205,35 @@ main {
   color: #fff;
   cursor: pointer;
 }
+
+/* ===== BUTTON STYLES ===== */
+.primary-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  margin: 5px;
+}
+
+/* Success Button */
+.primary-btn.success {
+  background-color: #28a745; /* green */
+}
+
+.primary-btn.success:hover {
+  background-color: #218838;
+}
+
+/* Error Button */
+.primary-btn.error {
+  background-color: #dc3545; /* red */
+}
+
+.primary-btn.error:hover {
+  background-color: #c82333;
+}
 /* ===============================
    Day 8: Form Input & Submit
 ================================ */
@@ -257,6 +286,35 @@ main {
   color: green;
   font-weight: bold;
 }
+<style>
+  /* General button style */
+  button {
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    margin: 5px;
+  }
+
+  /* Specific colored buttons */
+  .btn-success {
+    background-color: #28a745; /* green */
+  }
+
+  .btn-error {
+    background-color: #dc3545; /* red */
+  }
+
+  /* Optional hover effects */
+  .btn-success:hover {
+    background-color: #218838;
+  }
+  .btn-error:hover {
+    background-color: #c82333;
+  }
+</style>
 
 /* Make footer stick to bottom */
 html, body {
