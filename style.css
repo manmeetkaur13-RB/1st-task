@@ -335,17 +335,12 @@ body {
 }
 
 .footer {
-  margin-top: auto;
-  background-color: #222;
-  color: #fff;
-  padding: 30px 20px 10px;
-}
-
-/* FOOTER */
-.footer {
-  background: #1e293b;
-  color: #cbd5e1;
-  padding: 40px 20px 20px;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: auto;
 }
 
 .footer-container {
@@ -376,14 +371,6 @@ body {
   margin-top: 20px;
   border-top: 1px solid #334155;
   padding-top: 10px;
-}
-.footer {
-    background-color: #222;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    margin-top: auto;
 }
 
 /* MOBILE */
