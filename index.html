@@ -1,154 +1,140 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frontend Internship | Day 8</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Frontend Internship Project</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  
 
+<body class="page-wrapper">
+
+  <!-- 🔔 Notification -->
+  <div class="notification success" id="notification">
+    <span id="notificationText"></span>
+    <button class="close-btn" id="closeNotification">×</button>
+  </div>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <header class="navbar">
     <div class="logo">SATIC</div>
 
-    <!-- Search Bar (Desktop Only) -->
     <form class="search-bar" id="searchForm">
-      <input 
-        type="text" 
-        id="searchInput" 
-        placeholder="Search..."
-        aria-label="Search"
-      />
+      <input type="text" id="searchInput" placeholder="Search..." />
       <button type="submit">🔍</button>
     </form>
 
-    <!-- Hamburger -->
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      ☰
-    </button>
+    <button class="hamburger" id="hamburger">☰</button>
 
-    <!-- Navigation Links -->
     <ul class="nav-links" id="navLinks">
       <li><a href="#" class="active">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-  </nav>
+  </header>
 
-  
+  <!-- PAGE CONTENT -->
+  <div class="page-content">
 
-  <!-- MAIN CONTENT -->
-  <main id="id1">
-    <h1>Frontend Internship</h1><br>
-    <h2>Day-8 Task Completed</h2><br>
-    <p>Name: <strong>Manmeet</strong></p><br>
-    <p>This website is deployed using GitHub Pages.</p><br>
+    <main class="content">
+      <h1>Frontend Internship</h1>
+      <p>Name: <strong>Manmeet kaur </strong></p>
 
-    
-  <!-- Notification Banner -->
-  <div id="notification" class="notification hidden">
-  <span id="message"></span>
-  <button onclick="dismiss()">✖</button>
-</div>
-  
-  <div class="container">
-  <h2>Day 8 – Notification Banner</h2>
-  <button class="primary-btn success" onclick="showSuccess()">Show Success</button>
-<button class="primary-btn error" onclick="showError()">Show Error</button>
-  </div>
-    
-    
-    <!-- Day 8 Task: Form Input & Submit -->
-<section class="day8-form">
-  <h2>Day 8 – Form Input & Submit</h2>
+      <!-- FORM -->
+      <section class="form-section">
+        <h2>Basic Form Submission</h2>
 
-  <form id="contactForm">
-    <!-- Label connected to input -->
-    <label for="username">Username</label>
-    <input type="text" id="username" placeholder="Enter your name" />
+        <form id="basicForm" class="basic-form">
+          <div class="form-group">
+            <label for="username">Your Name</label>
+            <input type="text" id="username" placeholder="Enter your name" />
+            <small class="error-text" id="nameError">Name is required</small>
+          </div>
 
-    <!-- Error message -->
-    <p id="errorMsg" class="error" style="display:none">
-  This field is required
-    </p>
+          <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+      </section>
 
-    <!-- Submit button -->
-    <button type="submit" id="submitBtn" disabled>Submit</button>
-  </form>
-
-  <p id="successMsg" class="success"></p>
-</section>
-
-  
-  <section class="card-section">
-  <h2 class="card-title">Reusable Card Component</h2>
-
-  <div class="card-container">
-
-    <div class="card">
-      <img src="https://codemithra.com/wp-content/uploads/2020/09/web-design-development-blog-2.jpg" alt="Card Image">
-      <div class="card-content">
-        <h3>Frontend Development</h3>
-        <p>Learn how to build modern and responsive user interfaces using HTML, CSS and JavaScript.</p>
-        <button>Explore</button>
+      <!-- DEMO BUTTONS -->
+      <div class="demo-buttons">
+        <button class="primary-btn" onclick="showSuccess()">Show Success</button>
+        <button class="error-btn" onclick="showError()">Show Error</button>
       </div>
-    </div>
+    </main>
 
-    <div class="card">
-      <img src="https://images.ctfassets.net/wp1lcwdav1p1/31dUrsGyucK0UNmJEQUqj3/3c57d917e84f6500ee2ec54e8760b854/UX_vs_UI.png?w=1500&q=60" alt="Card Image">
-      <div class="card-content">
-        <h3>UI Components</h3>
-        <p>Create reusable UI components that improve development speed and consistency.</p>
-        <button>Explore</button>
-      </div>
-    </div>
+    <!-- CARDS -->
+    <section class="cards-section">
+      <h2 class="section-title">Our Services</h2>
 
-    <div class="card">
-      <img src="https://yeswebdesignstudio.com/wp-content/uploads/2023/06/Responsive-Design-Mock-up.webp" alt="Card Image">
-      <div class="card-content">
-        <h3>Responsive Design</h3>
-        <p>Design layouts that work perfectly on mobile, tablet, and desktop devices.</p>
-        <button>Explore</button>
+      <div class="cards-grid">
+        <div class="card">
+          <img src="https://codemithra.com/wp-content/uploads/2020/09/web-design-development-blog-2.jpg" alt="">
+          <div class="card-body">
+            <h3>Web Development</h3>
+            <p>Build responsive modern websites.</p>
+            <button class="card-btn">Learn More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.ctfassets.net/wp1lcwdav1p1/31dUrsGyucK0UNmJEQUqj3/3c57d917e84f6500ee2ec54e8760b854/UX_vs_UI.png?w=1500&q=60" alt="">
+          <div class="card-body">
+            <h3>UI / UX Design</h3>
+            <p>Clean and intuitive designs.</p>
+            <button class="card-btn">Learn More</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://yeswebdesignstudio.com/wp-content/uploads/2023/06/Responsive-Design-Mock-up.webp" alt="">
+          <div class="card-body">
+            <h3>Responsive Layouts</h3>
+            <p>Works on all devices.</p>
+            <button class="card-btn">Learn More</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
   </div>
-  </section>
-   <script src="script.js"></script>
-    
-    <footer class="footer">
-  <h2 class="footer-title">SATIC</h2>
-  <p class="footer-subtitle">Frontend Internship Project</p>
 
-  <div class="footer-links">
-    <div>
-      <h3>Company</h3>
-      <a href="#">About</a>
-      <a href="#">Careers</a>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-column">
+        <h3>SATIC</h3>
+        <p>Frontend Internship Project</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+
     </div>
 
-    <div>
-      <h3>Support</h3>
-      <a href="#">Help Center</a>
-      <a href="#">Contact</a>
+    <div class="footer-bottom">
+      © 2026 Manmeet kaur. All rights reserved.
     </div>
+  </footer>
 
-    <div>
-      <h3>Legal</h3>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms</a>
-    </div>
-  </div>
-
-  <hr />
-  <p class="footer-bottom">© 2026 Manmeet. All rights reserved.</p>
-    </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
-    
-
