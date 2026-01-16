@@ -377,6 +377,14 @@ body {
   border-top: 1px solid #334155;
   padding-top: 10px;
 }
+.footer {
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: auto;
+}
 
 /* MOBILE */
 @media (max-width: 768px) {
