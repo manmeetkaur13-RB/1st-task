@@ -1,102 +1,73 @@
-// ==============================
-// MOBILE NAVIGATION
-// ==============================
+// NAV
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-// Toggle menu
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
-
-  // Disable background scroll when menu is open
-  document.body.style.overflow =
-    navLinks.classList.contains("show") ? "hidden" : "auto";
 });
 
-// Close menu when any link is clicked
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("show");
-    document.body.style.overflow = "auto";
-  });
-});
-
-
-// ==============================
-// SEARCH BAR FUNCTIONALITY
-// ==============================
+// SEARCH
 const searchForm = document.getElementById("searchForm");
 const searchInput = document.getElementById("searchInput");
 
-if (searchForm && searchInput) {
-  searchForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+searchForm.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!searchInput.value.trim()) {
+    alert("Enter search term");
+    return;
+  }
+  alert(`Searching for: ${searchInput.value}`);
+  searchInput.value = "";
+});
 
-    const value = searchInput.value.trim();
-
-    if (!value) {
-      alert("Please enter a search term");
-      searchInput.focus();
-      return;
-    }
-
-    alert("Searching for: " + value);
-  });
-}
-/* ===== Day 7: Notification ===== */
+// NOTIFICATION
 const notification = document.getElementById("notification");
-const message = document.getElementById("message");
+const notificationText = document.getElementById("notificationText");
+const closeNotification = document.getElementById("closeNotification");
 
 function showSuccess() {
-  message.textContent = "Success! Task deployed successfully.";
-  notification.className = "notification success";
+  notification.classList.remove("error");
+  notification.classList.add("success");
+  notificationText.textContent = "✅ Action completed successfully!";
+  notification.style.display = "flex";
+
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 3000);
 }
 
 function showError() {
-  message.textContent = "Error! Something went wrong.";
-  notification.className = "notification error";
+  notification.classList.remove("success");
+  notification.classList.add("error");
+  notificationText.textContent = "❌ Something went wrong!";
+  notification.style.display = "flex";
+
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 3000);
 }
 
-function dismiss() {
-  notification.classList.add("hidden");
-}
+closeNotification.addEventListener("click", () => {
+  notification.style.display = "none";
+});
 
-// ================================
-// Day 8: Form Input & Submit
-// ================================
-
-const usernameInput = document.getElementById("username");
-const errorMsg = document.getElementById("errorMsg");
+// FORM
+const form = document.getElementById("basicForm");
+const username = document.getElementById("username");
 const submitBtn = document.getElementById("submitBtn");
-const contactForm = document.getElementById("contactForm");
-const successMsg = document.getElementById("successMsg");
+const errorText = document.getElementById("nameError");
 
-if (usernameInput && submitBtn && contactForm) {
+username.addEventListener("input", () => {
+  const valid = username.value.trim() !== "";
+  submitBtn.disabled = !valid;
+  errorText.style.display = valid ? "none" : "block";
+  username.classList.toggle("error", !valid);
+});
 
-  // Enable / disable submit button
-  usernameInput.addEventListener("input", () => {
-    if (usernameInput.value.trim() === "") {
-      submitBtn.disabled = true;
-      errorMsg.style.display = "block";
-    } else {
-      submitBtn.disabled = false;
-      errorMsg.style.display = "none";
-    }
-  });
-
-  // Prevent empty submission
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (usernameInput.value.trim() === "") {
-      errorMsg.style.display = "block";
-      submitBtn.disabled = true;
-      return;
-    }
- successMsg.textContent = "Form submitted successfully!";
-errorMsg.style.display = "none";
-usernameInput.value = "";
-submitBtn.disabled = true;
-    
-  });
-}
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!username.value.trim()) return;
+  showSuccess();
+  form.reset();
+  submitBtn.disabled = true;
+});
